@@ -27,7 +27,7 @@ public class ClienteController {
         return "clienteNuevo";
     }
 
-    @GetMapping("/clientes/new")
+    @GetMapping("/clientes/new/save")
     public String clienteSave(@ModelAttribute Cliente cliente){
         clienteRepository.insertarCliente(cliente.getNum_id(), cliente.getTipo_persona());
         return "clienteNuevo";
