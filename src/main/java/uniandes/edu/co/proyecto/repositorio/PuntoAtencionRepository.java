@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import jakarta.transaction.Transactional;
-//import uniandes.edu.co.proyecto.modelo.Operacion_cuenta;
-//import uniandes.edu.co.proyecto.modelo.Operacion_prestamo;
+import uniandes.edu.co.proyecto.modelo.Operacion_cuenta;
+import uniandes.edu.co.proyecto.modelo.Operacion_prestamo;
 import uniandes.edu.co.proyecto.modelo.PuntoAtencion;
-//import uniandes.edu.co.proyecto.modelo.Transaccion;
+import uniandes.edu.co.proyecto.modelo.Transaccion;
 
 public interface PuntoAtencionRepository extends JpaRepository<PuntoAtencion, Integer> {
 
@@ -36,7 +36,6 @@ public interface PuntoAtencionRepository extends JpaRepository<PuntoAtencion, In
     @Query(value = "DELETE FROM puntos_atencion WHERE id =:id", nativeQuery = true)     
     void eliminarPuntoAtencion(@Param("id") int id);
 
-    /* 
 
     @Query(value = "SELECT * FROM transacciones TR"+//
                    " WHERE TR.punto_atencion =:id", nativeQuery = true)     
@@ -49,5 +48,5 @@ public interface PuntoAtencionRepository extends JpaRepository<PuntoAtencion, In
     @Query(value = "SELECT * FROM operacionesprestamo OPP"+//
                    " WHERE OPP.punto_atencion =:id", nativeQuery = true)     
     Collection<Operacion_prestamo> darOperacionesPrestamosPunto(@Param("id") int id);
-    */
+
 }

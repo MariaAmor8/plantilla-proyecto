@@ -17,10 +17,10 @@ public interface LugarRepository extends JpaRepository<Lugar, Integer>{
     Collection<Lugar> darLugares();
 
     @Query(value = "SELECT * FROM lugares WHERE codigoPostal = :codigoPostal AND direccion = :direccion",nativeQuery = true)
-    Lugar darLugar(@Param("codigoPostal") String codigoPostal,@Param("direccion") int direccion);
+    Lugar darLugar(@Param("codigoPostal") int codigoPostal,@Param("direccion")String direccion);
     
     @Query(value = "DELETE FROM lugares WHERE codigoPostal = :codigoPostal AND direccion = :direccion",nativeQuery = true)
-    Lugar borrarLugar(@Param("codigoPostal") String codigoPostal,@Param("direccion") int direccion);
+    Lugar borrarLugar(@Param("codigoPostal") int codigoPostal,@Param("direccion") String direccion);
 
     @Modifying
     @Transactional

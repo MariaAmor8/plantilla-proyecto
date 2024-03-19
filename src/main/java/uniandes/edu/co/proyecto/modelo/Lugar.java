@@ -15,14 +15,14 @@ public class Lugar {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    String codigoPostal;
+    int codigoPostal;
     String direccion;
     String ciudad;
     String departamento;
 
     public Lugar(){;}
 
-    public Lugar(String codigoPostal, String direccion, String ciudad, String departamento) {
+    public Lugar(int codigoPostal, String direccion, String ciudad, String departamento) {
         this.codigoPostal = codigoPostal;
         this.direccion = direccion;
         this.ciudad = ciudad;
@@ -37,11 +37,11 @@ public class Lugar {
         this.id = id;
     }
 
-    public String getCodigoPostal() {
+    public int getCodigoPostal() {
         return codigoPostal;
     }
 
-    public void setCodigoPostal(String codigoPostal) {
+    public void setCodigoPostal(int codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
 

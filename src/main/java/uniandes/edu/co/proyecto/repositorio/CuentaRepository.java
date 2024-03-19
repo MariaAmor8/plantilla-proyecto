@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import uniandes.edu.co.proyecto.modelo.Cuenta;
-//import uniandes.edu.co.proyecto.modelo.Operacion_cuenta;
-//import uniandes.edu.co.proyecto.modelo.Transaccion;
+import uniandes.edu.co.proyecto.modelo.Operacion_cuenta;
+import uniandes.edu.co.proyecto.modelo.Transaccion;
 
 import java.sql.Date;
 
@@ -162,7 +162,7 @@ public interface CuentaRepository extends JpaRepository<Cuenta, Integer>{
         "FROM transacciones t*\\r\\n" + //"
         "WHERE t.id_cuenta_origen = c.Id)", nativeQuery = true)
     void actualizarFechaUltimaTransaccion();
-/* 
+
     @Modifying
     @Transactional
     @Query(value = "SELECT oc.**\\r\\n" + //"
@@ -178,7 +178,7 @@ public interface CuentaRepository extends JpaRepository<Cuenta, Integer>{
     Collection<Transaccion> listaTransaccionesCuentaPorMes(@Param("id") Integer id, @Param("mes") String mes);
 
     
-*/
+
 
     
 }

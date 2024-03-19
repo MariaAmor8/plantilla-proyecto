@@ -92,5 +92,13 @@ public class Usuario {
         this.lugar = lugar;
     }
 
+    public Integer getNum_id() {
+        return num_id;
+    }
+
+    public void setNum_id(Integer num_id) {
+        this.num_id = num_id;
+    }
+
 
 }   
